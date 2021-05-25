@@ -20,7 +20,7 @@ function App() {
   const fetchMovies = async (search) => {
       setSearchInput("")
       const urlSearch = search.toLowerCase().replace(" ", "_")
-      const data = await fetch(`http://www.omdbapi.com/?apikey=5f26534f&s=${urlSearch}&type=movie&r=json`)
+      const data = await fetch(`https://www.omdbapi.com/?apikey=5f26534f&s=${urlSearch}&type=movie&r=json`)
       const json = await data.json()
       setMovieResults(json.Search)
   } 
